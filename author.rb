@@ -31,30 +31,12 @@ class Author
         Book.new(title, word_count, self)
     end
 
-    # def total_words
-    #     self.all.sum {|book| book.word_count}
-    # end
-
-    # def total_words
-    #     self.Books.word_count.count
-    # end
-
-    def total_words(word_count)
-    
+    def total_words
+        self.books.map { |book| book.word_count}.sum
     end
 
-
-
     def self.most_words
-        small_n = 0
-        most_words = nil
-        Books.all.each do |author|
-          if author.word_count > small_n
-            small_n = author.word_count
-            most_words = author
-          end
-        end
-        most_words
+       self.all.max_by  {|author| author.total_words}
     end
 
 end
