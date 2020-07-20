@@ -23,4 +23,7 @@ class Book
         @@all
     end
 
+
+        
+
 end
