@@ -10,6 +10,7 @@
 class Author
 
     @@all = []
+    @total = []
 
     attr_accessor :name
 
@@ -30,9 +31,18 @@ class Author
         Book.new(title, word_count, self)
     end
 
-    def total_words
-        self.all.sum {|book| book.word_count}
+    # def total_words
+    #     self.all.sum {|book| book.word_count}
+    # end
+
+    # def total_words
+    #     self.Books.word_count.count
+    # end
+
+    def total_words(word_count)
+    
     end
+
 
 
     def self.most_words
