@@ -46,8 +46,4 @@ class Author
         most_words
     end
 
-    def summon_word_count
-        Books.word_count.all.select {|book| book.author == self}
-    end
-
 end

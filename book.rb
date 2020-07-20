@@ -7,9 +7,8 @@
 
 
 class Book
-    
    
-    @@total_wc = []
+    @@all = []
     attr_accessor :title, :author, :word_count
     
     def initialize (title, word_count, author)
